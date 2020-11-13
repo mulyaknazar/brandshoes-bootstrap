@@ -58,15 +58,21 @@ hr {
     display: flex;  
 }
 
+.title{
+    margin: 20px 5px 5px 70px;
+    font-size: 2em;
+}
+
 .items{
     width: 310px;
     height: 435px;
     margin: 10px;
 }
 
-.items img {
+.shoes-image {
     width: 300px;
     height: 300px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.3)
 }
 
 footer {
