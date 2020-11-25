@@ -3,13 +3,15 @@
 <head>
 	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
  	<title>Brand shoes</title>
  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
  	<link rel="stylesheet" href="css/index.css">
- 	<!--    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>    -->
-
-
-
+ 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+ 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+ 	<link rel="stylesheet" type="text/css" href="css/clock-style.css"/>
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	
 </head>
 
 <body>
@@ -48,96 +50,153 @@
 		</nav>
 	</header>
 
+	<div id="year" class="year"></div>
+    <h1>New Year Countdown</h1>
+	<div id="countdown" class="countdown">
+      <div class="time">
+        <h2 id="days">00</h2>
+        <small>days</small>
+      </div>
+      <div class="time">
+        <h2 id="hours">00</h2>
+        <small>hours</small>
+      </div>
+      <div class="time">
+        <h2 id="minutes">00</h2>
+        <small>minutes</small>
+      </div>
+      <div class="time">
+        <h2 id="seconds">00</h2>
+        <small>seconds</small>
+      </div>
+    </div>
+
+    <img
+      src="/img/spinner.gif"
+      alt="Loading..."
+      id="loading"
+      class="loading"
+    />
+
 
 <main class="container">
-    <hr>
 	<h2 class="title" id="Men">Men's shoes</h2>
-		<div class="mens-shoes">  <!-- class="for_slick_slider  multiple-items" -->
-			<div class="items">
+		<div class="items-block">
+			<div class="item">
 				<img class="shoes-image" src="img/men_nike_air_force_white.png" alt="Nike Air Force 1 '07">
-				<div class="item-description"> <p>Nike Air Force 1 '07<br> Men's Shoes<br> 2 colours<br> $109.90</p></div>
+				<div class="item-description "> <p>Nike Air Force 1 '07<br> Men's Shoes<br> 2 colours<br> $109.90</p></div>
 			</div>
-			<div class="items">
+			<div class="item">
 				<img class="shoes-image" src="img/men_nike_air_max_leather.png" alt="Nike Air Max Plus 3 Leather">
 				<div class="item-description"><p>Nike Air Max Plus 3 Leather<br> Men's Shoes<br> 2 colours<br> $149.90</p></div>
 			</div>
-			<div class="items">
+			<div class="item">
 				<img class="shoes-image" src="img/men_nike_air_max_plus.png" alt="Nike Air Max Plus">
 				<div class="item-description"><p>Nike Air Max Plus<br> Men's Shoes<br> 2 colours<br> $139.90</p></div>
 			</div>
-		</div>
-        <hr>
-	<h2 class="title" id="Women">Women's shoes</h2>
-		<div class="womens-shoes">
-			<div class="items">
-				<img class="shoes-image" src="img/women_nike_air_max_270.png" alt="Nike Air Max">
-				<div class="item-name"></div>
-				<div class="item-description"><span>Nike Air Max 270</span><p>Women's Shoes<br> 4 colours<br> $119.90</p></div>
+			<div class="item">
+				<img class="shoes-image" src="img/men-air-max-95.jpg" alt="Nike Air Max 95">
+				<div class="item-description"><p>Nike Air Max 95<br> Men's Shoes<br> 1 colour<br> $180</p></div>
 			</div>
-			<div class="items">
-				<img class="shoes-image" src="img/women_nike_air_max_90.png" alt="Nike Air Max 90">
-				<div class="item-description"><p>Nike Air Max 90<br> Women's Shoes<br> 2 colours<br> $114.90</p></div>
+			<div class="item">
+				<img class="shoes-image" src="img/men-air-vapormax-plus.png" alt="Nike Air VaporMax Plus">
+				<div class="item-description"><p>Nike Air VaporMax Plus<br> Men's Shoes<br> 3 colours<br> $200</p></div>
 			</div>
-			<div class="items">
-				<img class="shoes-image" src="img/women_nike_air_max_95.png" alt="Nike Air Max 95">
-				<div class="item-description"><p>Nike Air Max 95<br> Women's Shoes<br> 1 colours<br> $139.90</p></div>
-			</div>
-		</div>
-        <hr>
-	<h2 class="title" id="Kids">Kids shoes</h2>
-		<div class="kids-shoes">
-			<div class="items">
-				<img class="shoes-image" src="img/kid_nike_force_lv8.png" alt="Nike Force 1 LV8 KSA">
-				<div class="item-description"><p>Nike Force 1 LV8 KSA<br> Younger kid's Shoe<br> 2 colours<br> $39.90</p></div>
-			</div>
-			<div class="items">
-				<img class="shoes-image" src="img/kids_nike_air_max_90.png" alt="Nike Air Max 90 LTR">
-				<div class="item-description"><p>Nike Air Max 90 LTR<br> Older kid's Shoe<br> 2 colours<br> $79.90</p></div>
-			</div>
-			<div class="items">
-				<img class="shoes-image" src="img/kid_nike_air_vapormax.png" alt="Nike Force VaporMax">
-				<div class="item-description"><p>Nike Force VaporMax<br> Older kid's Shoe<br> 1 colours<br> $129.95</p></div>
+			<div class="item">
+				<img class="shoes-image" src="img/men-air-force-1-gtx.jpg" alt="Nike Air Force 1 GTX">
+				<div class="item-description"><p>Nike Air Force 1 GTX<br> Men's Shoes<br> 3 colours<br> $150</p></div>
 			</div>
 		</div>
 		<hr>
+	<h2 class="title" id="Women">Women's shoes</h2>
+		<div class="items-block">
+			<div class="item">
+				<img class="shoes-image" src="img/women_nike_air_max_270.png" alt="Nike Air Max">
+				<div class="item-description"><span>Nike Air Max 270</span><p>Women's Shoes<br> 4 colours<br> $119.90</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/women_nike_air_max_90.png" alt="Nike Air Max 90">
+				<div class="item-description"><p>Nike Air Max 90<br> Women's Shoes<br> 2 colours<br> $114.90</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/women_nike_air_max_95.png" alt="Nike Air Max 95">
+				<div class="item-description"><p>Nike Air Max 95<br> Women's Shoes<br> 1 colour<br> $139.90</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/women-air-max-90-twist.jpg" alt="Nike Air Max 90 Twist">
+				<div class="item-description"><span>Nike Air Max 90 Twist</span><p>Women's Shoes<br> 1 colour<br> $120</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/women-air-max-97.jpg" alt="Nike Air Max 97">
+				<div class="item-description"><p>Nike Air Max 97<br> Women's Shoes<br> 9 colours<br> $170</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/women-air-max-verona.jpg" alt="Nike Air Max Verona">
+				<div class="item-description"><p>Nike Air Max Verona<br> Women's Shoes<br> 5 colours<br> $130</p></div>
+			</div>
+		</div>
+		<hr>
+	<h2 class="title" id="Kids">Kids shoes</h2>
+		<div class="items-block">
+			<div class="item">
+				<img class="shoes-image" src="img/kid_nike_force_lv8.png" alt="Nike Force 1 LV8 KSA">
+				<div class="item-description"><p>Nike Force 1 LV8 KSA<br> Younger kid's Shoe<br> 2 colours<br> $39.90</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/kids_nike_air_max_90.png" alt="Nike Air Max 90 LTR">
+				<div class="item-description"><p>Nike Air Max 90 LTR<br> Older kid's Shoe<br> 2 colours<br> $79.90</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/kid_nike_air_vapormax.png" alt="Nike Force VaporMax">
+				<div class="item-description"><p>Nike Force VaporMax<br> Older kid's Shoe<br> 1 colour<br> $129.95</p></div>
+			</div>
+			<div class="item">
+				<img class="shoes-image" src="img/kid-air-max-plus-big.jpg" alt="Nike Air Max Plus Big">
+				<div class="item-description"><p>Nike Air Max Plus Big<br> Older kid's Shoe<br> 4 colours<br> $145</p></div>
+			</div>
+		</div>
+		<hr>
+		
 </main>
 <footer>
-	<form>
+	<form class="contact-form">
 		<h2>Contact us</h2>
-		<p>
-			<label>
-				<input type="text" placeholder="Your Name" required name="user-name">
-			</label><br>
-		</p>
-		<p>
-			<label><input type="email" placeholder="Email address" required name="user-email">
-			</label><br>
-		</p>
-		<p>
-			<label>
-				<input type="number" placeholder="Phone number">
-			</label><br>
-		</p>
-		<p>
-			<label>
-				<textarea placeholder="Type your message" required name="message"></textarea>
-			</label><br>
-		</p>
-		<input type="submit" value="Send" >
+		<div class="input-group mb-3">
+  			<div class="input-group-prepend">
+   			 	<span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+ 		 	</div>
+  				<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+		</div>
+		<div class="input-group mb-3">
+  			<div class="input-group-prepend">
+   			 	<span class="input-group-text" id="inputGroup-sizing-default">e-mail adress</span>
+ 		 	</div>
+  				<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+		</div>
+		<div class="input-group mb-3">
+  			<div class="input-group-prepend">
+   			 	<span class="input-group-text" id="inputGroup-sizing-default">Phone number</span>
+ 		 	</div>
+  				<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+		</div>
+		<div class="input-group">
+  			<div class="input-group-prepend">
+    			<span class="input-group-text">Your message</span>
+  			</div>
+  				<textarea class="form-control" aria-label="With textarea"></textarea>
+  			</div>
+  			<br><button type="button" class="btn btn-secondary">Send</button>
 	</form>
 </footer>
 
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-	<!--****
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/custom.js"></script> 
-	****-->
-	
-	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>	
+	<script type="text/javascript" src="js/index.js"></script>
+	<script src="js/script.js"></script>
 </body>
 	
 </html>
